@@ -4,7 +4,7 @@ Yöneticilerin, kendi alt organizasyonlarındaki (N-1 ve N-2) çalışanların �
 
 ## Canlı demo
 
-`https://KULLANICI-ADIN.github.io/sosyal-bag-portali/`
+https://tuanapektas.github.io/Sosyal-Olaylar-Portali/
 
 Tüm ekranlar tek bir `index.html` dosyasındadır: gösterge paneli, çalışan detay sayfası (listeden isme tıklanınca açılır) ve aylık yönetici e-postası önizlemesi. Dosya bilgisayarda çift tıklanarak da açılabilir.
 
@@ -20,14 +20,25 @@ Tüm ekranlar tek bir `index.html` dosyasındadır: gösterge paneli, çalışan
 
 ## C# uygulaması
 
-`SocialDashboard` klasöründe yer alır. Aktif yöneticinin organizasyonundaki son 1 ay ve önümüzdeki 1 aya ait olayları listeler ve her yönetici için aylık e-postayı HTML olarak üretir.
+`Program.cs` ve `MonthlyMailBuilder.cs` dosyalarından oluşur. Aktif yöneticinin organizasyonundaki son 1 ay ve önümüzdeki 1 aya ait olayları listeler ve her yönetici için aylık e-postayı HTML olarak üretir. Veriyi `employees.json` dosyasından okur.
+
+Deponun ana dizininde çalıştırın:
 
 ```bash
-cd SocialDashboard
 dotnet run
 ```
 
-.NET 8 SDK gerekir. Üretilen e-postalar `SocialDashboard/output/mails/` klasörüne kaydedilir.
+.NET 8 SDK gerekir. Üretilen e-postalar `output/mails/` klasörüne kaydedilir.
+
+## Dosyalar
+
+| Dosya | Açıklama |
+|---|---|
+| `index.html` | Web arayüzü: gösterge paneli, çalışan detay ve aylık mail ekranları |
+| `Program.cs` | C# ana program: veri okuma, LINQ ile olay filtreleme, mail üretimi |
+| `MonthlyMailBuilder.cs` | Aylık yönetici e-postasının HTML şablonu |
+| `SocialDashboard.csproj` | .NET proje dosyası |
+| `employees.json` | 100 kişilik test verisi |
 
 ## İş kuralları
 
