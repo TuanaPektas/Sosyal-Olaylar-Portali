@@ -48,6 +48,12 @@ dotnet run
 - **Tarih filtresi:** Varsayılan aralık bugünden 1 ay geri ve 1 ay ileridir; başlangıç en fazla 1 yıl geriye gidebilir.
 - **Aylık e-posta:** Her ayın 1'inde 09:00'da gönderilir ve gönderim tarihinden 1 ay geriye, 1 ay ileriye bakar.
 
+## Excel tasarımı
+
+Web sürümünden önce ekranlar, iş kuralları ve e-posta şablonu Excel'de tasarlandı. Tüm tasarım sayfaları ve görseller [excel-tasarim](excel-tasarim/) klasöründe.
+
+![Excel gösterge paneli tasarımı](excel-tasarim/01-dashboard.png)
+
 ## Teknolojiler
 
 C#, .NET 8, LINQ, System.Text.Json, HTML, CSS, JavaScript
